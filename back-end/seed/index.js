@@ -5,7 +5,7 @@ var Product = require('../models/Product');
 var Variant = require('../models/Variant');
 var mongoose = require('mongoose');
 const mongoConfig = require('../configs/mongo-config')
-mongoose.connect('mongodb+srv://user-123:user-123@mini-mern-tuto.t3eaw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true, });
+mongoose.connect('', { useNewUrlParser: true, useCreateIndex: true, });
 
 
 var categories =
