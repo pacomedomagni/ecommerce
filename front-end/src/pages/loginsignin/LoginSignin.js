@@ -9,7 +9,7 @@ import LoadingAnimation from '../../components/loadingAnimation'
 export default class LoginSignin extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {count:0}
     this.inputText = {}
     for (const input of props.INPUT_CONFIG) {
       this.state[input.name] = { errorMsg: '' }
@@ -68,8 +68,12 @@ export default class LoginSignin extends Component {
           return res
         })
         .catch(error => {
-          // console.log('loginsignin error')
-          // console.log(error.response)
+          this.setState({count:this.state.count+1})
+          if(this.state.count === 3){
+            window.prompt("This account is locked!")
+            jumpTo('/dashboard')
+          return error
+          }
           alert(error.response.data.error.message)
           return error
         })

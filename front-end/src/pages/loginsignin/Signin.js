@@ -20,11 +20,11 @@ const INPUT_CONFIG = [
   },
   {
     name: "password",
-    validations: [validateExistence, validateLength(6, 15), validateLowerCase, validateUpperCase]
+    validations: [validateExistence, validateLength(8, 8), validateLowerCase, validateUpperCase]
   },
   {
     name: "verifyPassword",
-    validations: [validateExistence, validateLength(6, 15), validateLowerCase, validateUpperCase]
+    validations: [validateExistence, validateLength(8, 8), validateLowerCase, validateUpperCase]
   },
 ]
 
